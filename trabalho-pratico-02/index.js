@@ -27,8 +27,6 @@ app.listen(port, async () => {
 });
 
 async function createFiles(states, cities) {
-    /* This method creates a file for each state in Estados.json and then 
-    inserts an array of cities that belongs to that state.*/
     try {
         states.forEach((state) => {
             let citiesArray = createCitiesArrays(state, cities);
@@ -144,20 +142,6 @@ async function bigCitiesNames(states) {
         });
     }
 
-    citiesAndStates.sort((a, b) => {
-        if (a.bigCityLen > b.bigCityLen) {
-            return -1;
-        }
-        if (a.bigCityLen < b.bigCityLen) {
-            return 1;
-        }
-        if (a.bigCityLen === b.bigCityLen) {
-            if (a.bigCity < b.bigCity) {
-                return -1;
-            }
-        }
-    });
-
     let bigCities = citiesAndStates.map((city) => {
         return `${city.bigCity} - ${city.initials}`;
     });
@@ -192,20 +176,6 @@ async function smallCitiesNames(states) {
             initials: states[i].Sigla,
         });
     }
-
-    citiesAndStates.sort((a, b) => {
-        if (a.smallCityLen > b.smallCityLen) {
-            return -1;
-        }
-        if (a.smallCityLen < b.smallCityLen) {
-            return 1;
-        }
-        if (a.smallCityLen === b.smallCityLen) {
-            if (a.smallCity < b.smallCity) {
-                return -1;
-            }
-        }
-    });
 
     let smallCities = citiesAndStates.map((city) => {
         return `${city.smallCity} - ${city.initials}`;
