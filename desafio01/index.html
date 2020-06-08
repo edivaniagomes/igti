@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <title>Pesquisa de usuários</title>
+</head>
+<body>
+    <h1 class="title">Pesquisa de Usuários</h1>
+    <div id="search-elements">
+        <input type="search" id="search-bar" placeholder="Escreva sua pesquisa aqui...">
+        <button id="search-button">Buscar!</button>
+    </div>
+    <section id="main">
+        <div id="results-tab" class="tab">
+            <h2><span id="results-quantity">0</span> usuários encontrados!</h2>
+            <div id="search-results"></div>
+        </div>
+        <div id="data-tab" class="tab">
+            <h2>Estatísticas:</h2>
+            <h4>Usuárias femininas: <span id="masc-gender-sum">0</span></h4>
+            <h4>Usuários masculinos: <span id="fem-gender-sum">0</span></h4>
+            <h4>Soma das idades: <span id="ages-sum">0</span></h4>
+            <h4>Média das idades: <span id="ages-average">0</span></h4>
+        </div>
+    </section>
+    <script src="./js/script.js"></script>
+</body>
+</html>
